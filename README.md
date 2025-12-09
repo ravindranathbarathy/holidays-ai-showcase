@@ -15,13 +15,6 @@ Welcome to my n8n automation showcase! This repository documents a 15-minute dem
 
 Unlike cloud-only solutions, n8n gives you complete ownership of your data and workflows, making it ideal for sensitive operations and custom requirements.
 
-## 📂 Project Structure
-
-- **`docs/`** - GitHub Pages documentation
-  - `assets/images/` - Images and graphics
-  - `assets/screenshots/` - Workflow screenshots
-- **`workflows/`** - Exported n8n workflow files
-
 ## 🚀 Quick Start
 
 To learn more about what I've built, check out the [full documentation](docs/index.md).
@@ -39,6 +32,84 @@ This showcase uses n8n locally hosted on a mini PC. To run these workflows, you'
 - [Full Project Overview](docs/index.md)
 - [Leading AI Models](#-leading-ai-models)
 - [Learning Resources](#-learning-resources)
+
+### Project 1: Digitize Diary Entry
+
+**Transform handwritten diary entries into searchable digital text using AI vision and automation**
+
+#### Overview
+
+This workflow takes a photo of a handwritten diary entry from your physical notepad and automatically digitizes it into text using GPT-4 Vision. Triggered via an iOS Shortcut, it enables seamless capture and digitization without manual effort.
+
+#### Key Features
+
+- 📱 **iPhone Shortcut Integration** - Trigger the workflow from your phone's home screen
+- 🤖 **AI Vision Processing** - Uses GPT-4 Vision to extract handwritten text with high accuracy
+- 💾 **Automatic Storage** - Saves digitized entries to your preferred location
+- ⚡ **Real-time Processing** - Fast turnaround from capture to digitized text
+- 🔐 **Self-Hosted & Private** - Your diary entries stay on your own server
+
+#### How It Works
+
+1. **Trigger**: Tap the "Skipper's Log" shortcut on your iPhone
+2. **Capture**: Take a photo of your diary entry from your notepad
+3. **Send**: The image is sent to your self-hosted n8n instance
+4. **Process**: GPT-4 Vision reads the handwritten text
+5. **Store**: Digitized entry is saved and organized
+6. **Notify**: You receive confirmation with the extracted text
+
+#### Visual Overview
+
+| Component | Screenshot |
+|-----------|-----------|
+| **iOS Shortcut** | ![Skipper's Log Shortcut](./docs/assets/screenshots/skipperslog.jpeg) |
+| **Handwritten Entry** | ![Diary Entry](./docs/assets/screenshots/IMG_0339.jpeg) |
+
+#### Workflow Architecture
+
+```
+iPhone Shortcut
+    ↓
+Send Image → n8n Webhook
+    ↓
+GPT-4 Vision Analysis
+    ↓
+Extract & Format Text
+    ↓
+Store Result
+    ↓
+Send Confirmation
+```
+
+#### Technologies Used
+
+- **n8n** - Workflow automation platform
+- **GPT-4 Vision** - AI model for handwriting recognition
+- **iOS Shortcuts** - Mobile trigger mechanism
+- **Webhook** - Communication between iPhone and n8n
+
+#### Use Cases
+
+✅ Quick personal journaling without typing
+✅ Creating searchable digital archives of handwritten notes
+✅ Backup and preservation of diary entries
+✅ Integration with other automation workflows
+✅ Building a personal knowledge base
+
+#### Benefits Over Manual Transcription
+
+| Aspect | Manual | With Workflow |
+|--------|--------|---------------|
+| **Time** | 5-10 mins per entry | <30 seconds |
+| **Accuracy** | Human error prone | 95%+ accuracy |
+| **Consistency** | Variable formatting | Standardized |
+| **Friction** | High (typing required) | Low (one tap) |
+| **Integration** | Not possible | Integrates with other workflows |
+
+---
+
+
+
 
 ## 🧠 Leading AI Models
 
