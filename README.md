@@ -63,7 +63,7 @@ This workflow takes a photo of a handwritten diary entry from your physical note
 | Component | Screenshot |
 |-----------|-----------|
 | **iOS Shortcut** | ![Skipper's Log Shortcut](./docs/assets/screenshots/skipperslog.jpeg) |
-| **Handwritten Entry** | ![Diary Entry](./docs/assets/screenshots/IMG_0339.jpeg) |
+| **Handwritten Entry** | ![Diary Entry](./docs/assets/screenshots/IMG_0339.jpg) |
 
 #### Workflow Architecture
 
